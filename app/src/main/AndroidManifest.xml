@@ -9,8 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ThucHanhTuan2">
-        <activity android:name=".MainActivity2f"></activity>
-        <activity android:name=".MainActivity2e" />
         <activity android:name=".MainActivity2d" />
         <activity android:name=".MainActivity2c" />
         <activity android:name=".MainActivity2b" />

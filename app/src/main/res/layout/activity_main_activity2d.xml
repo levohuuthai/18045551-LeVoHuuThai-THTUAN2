@@ -11,85 +11,124 @@
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:foregroundGravity="center"
         android:gravity="center"
+
         android:text="PASSWORD \n GENERATOR"
         android:textColor="#FAF6F6"
         android:textSize="25sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="63dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="272dp"
-        android:layout_height="69dp"
-        android:background="#1D024E"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="151dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
         android:text="Password length"
         android:textColor="#FDFAFA"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="277dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPass" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/txtLenght"
         android:layout_width="176dp"
         android:layout_height="49dp"
+        android:layout_marginStart="44dp"
         android:background="#FDFAFA"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="205dp"
-        tools:layout_editor_absoluteY="267dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView24"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toTopOf="@+id/textView24"
+        app:layout_constraintVertical_bias="0.409" />
 
     <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="267dp"
-        android:layout_height="47dp"
-
-        android:text="Include lower case letters"
-        android:buttonTint="@color/white"
-        android:textColor="#FAF6F6"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="359dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="246dp"
-        android:layout_height="27dp"
-        android:text="Include upcase letters"
-        android:textColor="#F8F7F7"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="443dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/chkNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:layoutDirection="rtl"
+        android:paddingRight="145sp"
         android:text="Include number"
         android:textColor="#F3EDED"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="549dp" />
+        app:layout_constraintEnd_toEndOf="@+id/chkUp"
+        app:layout_constraintTop_toBottomOf="@+id/chkUp" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/chkSpecial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:layoutDirection="rtl"
+        android:paddingRight="80sp"
         android:text="Include special symbol"
         android:textColor="#F4EFEF"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="632dp" />
+        app:layout_constraintEnd_toEndOf="@+id/chkNumber"
+        app:layout_constraintStart_toStartOf="@+id/chkNumber"
+        app:layout_constraintTop_toBottomOf="@+id/chkNumber" />
+
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Generate"
+        app:layout_constraintEnd_toEndOf="@+id/chkSpecial"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/chkSpecial"
+        app:layout_constraintTop_toBottomOf="@+id/chkSpecial" />
+
+    <TextView
+        android:id="@+id/txtPass"
+        android:layout_width="256dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:background="#FBF2F2"
+        android:textColor="#EF0909"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView21"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <CheckBox
+        android:id="@+id/chkLower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:gravity="right"
+        android:layoutDirection="rtl"
+        android:paddingRight="60sp"
+        android:text="Include lower case letters"
+        android:textColor="#EFE9E9"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <CheckBox
+        android:id="@+id/chkUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:layoutDirection="rtl"
+        android:paddingRight="90sp"
+        android:text="Include upcase letters"
+        android:textColor="#F8F6F6"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/chkLower"
+        app:layout_constraintStart_toStartOf="@+id/chkLower"
+        app:layout_constraintTop_toBottomOf="@+id/chkLower" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
